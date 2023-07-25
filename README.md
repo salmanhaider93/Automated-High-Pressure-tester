@@ -11,5 +11,6 @@
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/89019648-a950-44bd-aa22-fdebcd8296ca)
 
 
-![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/a31ca02e-9361-4a55-94d8-feef0a7ee1fb)
+
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/cc580975-e7f3-4dbd-b91a-8d641fbc4c9e)
 
