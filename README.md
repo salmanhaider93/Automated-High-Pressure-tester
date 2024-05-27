@@ -1,4 +1,4 @@
-# Automated-High-Pressure-tester
+# Automated High Pressure tester
 
 
 ## Interface
