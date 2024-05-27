@@ -6,12 +6,14 @@ Interface
 
 
 Electrical 
-![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/fca6373e-2d49-4a44-af4d-7c51e663edc9)
+
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/1fceb11b-b932-4b5e-ba24-990b1ad442f6)
 
 
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/71b1b247-c1c4-4d96-ba72-d3749eac1f1a)
 
-![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/89019648-a950-44bd-aa22-fdebcd8296ca)
 
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/593e0c5e-854a-444e-872f-3e808a04839d)
 
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/cc580975-e7f3-4dbd-b91a-8d641fbc4c9e)
@@ -19,3 +21,4 @@ Electrical
 
 Mechanical
 
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/4e8928c1-08f2-478a-998f-76c310db1217)
