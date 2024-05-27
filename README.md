@@ -1,12 +1,12 @@
 # Automated-High-Pressure-tester
 
 
-Interface
+## Interface
+
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/2f9eee6a-12ee-490b-a6e2-ce4b28529a28)
 
 
-
-Electrical 
+## Electrical
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/1fceb11b-b932-4b5e-ba24-990b1ad442f6)
 
@@ -19,7 +19,7 @@ Electrical
 
 
 
-Mechanical
+## Mechanical
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/4e8928c1-08f2-478a-998f-76c310db1217)
 
