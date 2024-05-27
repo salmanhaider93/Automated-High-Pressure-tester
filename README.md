@@ -10,9 +10,9 @@ Electrical
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/1fceb11b-b932-4b5e-ba24-990b1ad442f6)
 
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/00b96551-ce8c-46ab-84af-ed6c212a5c0e)
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/71b1b247-c1c4-4d96-ba72-d3749eac1f1a)
-
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/593e0c5e-854a-444e-872f-3e808a04839d)
 
