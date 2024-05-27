@@ -4,6 +4,7 @@
 ## Interface
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/2f9eee6a-12ee-490b-a6e2-ce4b28529a28)
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/b23b7c43-d153-4c23-bc6f-cf356847485d)
 
 
 ## Electrical
