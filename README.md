@@ -22,6 +22,8 @@
 
 ## Mechanical
 
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/6e0177cf-c763-4fc0-a5b3-5526a1d37048)
+
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/4e8928c1-08f2-478a-998f-76c310db1217)
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/69b140bd-bebd-42d4-8c27-343364f6a51e)
