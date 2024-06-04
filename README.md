@@ -18,6 +18,9 @@
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/593e0c5e-854a-444e-872f-3e808a04839d)
 
 
+## State machine 
+
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/4be61b4a-5b94-40d0-a84e-f42a00d8b880)
 
 
 ## Mechanical
