@@ -14,13 +14,14 @@ https://github.com/user-attachments/assets/982fd656-32b6-4165-b388-7a85966850b3
 
 ## Electrical
 
+![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/593e0c5e-854a-444e-872f-3e808a04839d)
+
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/1fceb11b-b932-4b5e-ba24-990b1ad442f6)
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/00b96551-ce8c-46ab-84af-ed6c212a5c0e)
 
 ![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/aa320245-9599-4c84-892a-67bb6ee31462)
 
-![image](https://github.com/salmanhaider93/Automated-High-Pressure-tester/assets/36808172/593e0c5e-854a-444e-872f-3e808a04839d)
 
 
 ## State machine 
