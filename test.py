@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from tkinter import messagebox
 import tkinter.messagebox
@@ -15,7 +14,13 @@ customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "gre
 class App(customtkinter.CTk):
     def __init__(self, master=None):
         super().__init__()
+        
+        # to remove the header enable it 
+        #self.overrideredirect(True)
+        
         self.create_widgets()
+        
+        
 
     # Connect to the LabJack U6-Pro
         #self.d = u6.U6()
@@ -27,7 +32,7 @@ class App(customtkinter.CTk):
 
     # Define the digital output lines for solonides adn switch 
         self.solonid_high_pressure = 9  # switch 1
-        self.solonid_low_pressure = 11   # switch 2
+        #self.solonid_low_pressure = 11   # switch 2
         self.solonid_vent =  8          # switch 0
         self.door_switch =  2            #switch 3
 
@@ -35,17 +40,16 @@ class App(customtkinter.CTk):
         ## Turn off all the switches when the program starts 
         self.d.setDOState(self.solonid_vent, 0)        
         self.d.setDOState(self.solonid_high_pressure, 0)
-        self.d.setDOState(self.solonid_low_pressure, 0)
+        #self.d.setDOState(self.solonid_low_pressure, 0)
         self.d.setDOState(10, 0)
 
      # configure window
         self.title("High Pressure Test")
-        self.geometry(f"{1000}x{600}")
+        self.geometry(f"{1025}x{568}") 
         
     # Start the door status thread
         self.start_door_status_thread()
 
-    
 
     def start_door_status_thread(self):
         self.door_status_thread = threading.Thread(target=self.run_door_status)
@@ -72,8 +76,8 @@ class App(customtkinter.CTk):
     def update_door_status(self, door_status):
         message = "Door is Open. Please close it.\n" if door_status == 0 else "Door is Closed. Start the test.\n" 
         self.message_textbox.insert(tk.END, message)
-        self.opendoorbutton.configure(fg_color="green", text="Close Door") if door_status == 0 else self.opendoorbutton.configure(fg_color="red", text="Open Door")
-        self.door_indicator.configure(fg_color="green") if door_status == 0 else self.door_indicator.configure(fg_color="red")
+        self.opendoorbutton.configure(fg_color="red", text="Close Door") if door_status == 0 else self.opendoorbutton.configure(fg_color="green", text="Open Door")
+        self.door_indicator.configure(fg_color="red") if door_status == 0 else self.door_indicator.configure(fg_color="green")
 
 
     ###
@@ -110,7 +114,7 @@ class App(customtkinter.CTk):
     def update_emergency_status(self, emergency_status):
         message = "Emergency!!" if emergency_status == 0 else "" 
         self.message_textbox.insert(tk.END, message)
-        self.emergency_indicator.configure(fg_color="green") if emergency_status == 0 else self.emergency_indicator.configure(fg_color="red")
+        self.emergency_indicator.configure(fg_color="red") if emergency_status == 0 else self.emergency_indicator.configure(fg_color="green")
     ###
         
 
@@ -161,14 +165,14 @@ class App(customtkinter.CTk):
         self.test1_indicator = customtkinter.CTkFrame(self.frame_1, fg_color="grey", width=100, height=50)
         self.test1_indicator.place(x=10, y=350)
 
-        self.test1_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Test 1", font=("Arial", 15))
+        self.test1_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Test", font=("Arial", 15))
         self.test1_label.place(x=35, y=400)
 
-        self.test2_indicator = customtkinter.CTkFrame(self.frame_1, fg_color="grey", width=100, height=50)
-        self.test2_indicator.place(x=170, y=350)
+        #self.test2_indicator = customtkinter.CTkFrame(self.frame_1, fg_color="grey", width=100, height=50)
+        #self.test2_indicator.place(x=170, y=350)
 
-        self.test2_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Test 2", font=("Arial", 15))
-        self.test2_label.place(x=195, y=400)
+        #self.test2_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Test 2", font=("Arial", 15))
+        #self.test2_label.place(x=195, y=400)
 
         self.progressbar_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Test Progress", font=("Arial", 18))
         self.progressbar_label.place(x=10, y=450)
@@ -188,24 +192,24 @@ class App(customtkinter.CTk):
         self.fill_sol_1= customtkinter.CTkFrame(self.frame_1,fg_color="white", width=50, height=50)
         self.fill_sol_1.place(x=470, y=380)
 
-        self.sol_2_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="SOl 2", font=("Arial", 15))
-        self.sol_2_label.place(x=580, y=430)
+        #self.sol_2_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="SOl 2", font=("Arial", 15))
+        #self.sol_2_label.place(x=580, y=430)
 
-        self.fill_sol_2 = customtkinter.CTkFrame(self.frame_1,fg_color="white", width=50, height=50)
-        self.fill_sol_2.place(x=570, y=380)
+        #self.fill_sol_2 = customtkinter.CTkFrame(self.frame_1,fg_color="white", width=50, height=50)
+        #self.fill_sol_2.place(x=570, y=380)
 
         self.vent_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Vent", font=("Arial", 15))
-        self.vent_label.place(x=680, y=430)
+        self.vent_label.place(x=580, y=430)
 
         self.vent= customtkinter.CTkFrame(self.frame_1,fg_color="white", width=50, height=50)
-        self.vent.place(x=670, y=380)
+        self.vent.place(x=570, y=380)
 
         self.opendoorbutton = customtkinter.CTkButton(self.frame_1, width=150, height=70, command=self.door_callback, border_width=2)
         self.opendoorbutton.place(x=450, y=470)
 
 
         self.emergency_label = customtkinter.CTkLabel(self.frame_1, justify=customtkinter.LEFT, text="Emergency", font=("Arial", 15))
-        self.emergency_label.place(x=900, y=520)
+        self.emergency_label.place(x=880, y=520)
         
         self.emergency_indicator = customtkinter.CTkFrame(self.frame_1, fg_color="grey", width=100, height=50)
         self.emergency_indicator.place(x=870, y=470)    
@@ -228,15 +232,32 @@ class App(customtkinter.CTk):
     def slider_callback(self, value):
         self.progressbar.set(value)
     
-
+    
+    def measure_initial_pressure(self):
+        # Define the calibration parameters for your specific pressure sensor
+        voltage_min = 0  # Minimum voltage from the pressure sensor in volts
+        voltage_max = 5  # Maximum voltage from the pressure sensor in volts
+        pressure_min = 0.0# Minimum pressure in mbar
+        pressure_max = 1034.21  # Maximum pressure in mbar
+        voltage_offset = 0.1  # Offset voltage from the pressure sensor in volts
+        
+        
+        #initial presure
+        ain0_voltage = self.d.getAIN(2)
+        self.initial_pressure = (ain0_voltage - voltage_min) * (pressure_max - pressure_min) / (voltage_max - voltage_min) + pressure_min
+        
+    
+    
+    
     def pressurereading_small(self,sensor):   
         # Define the calibration parameters for your specific pressure sensor
         voltage_min = 0  # Minimum voltage from the pressure sensor in volts
         voltage_max = 5  # Maximum voltage from the pressure sensor in volts
-        pressure_min = 0.0  # Minimum pressure in mbar
+        pressure_min = 0.0# Minimum pressure in mbar
         pressure_max = 1034.21  # Maximum pressure in mbar
         voltage_offset = 0.1  # Offset voltage from the pressure sensor in volts
-
+        
+        
         # Continuously read and display the pressure
         while not self.stopped:
             # Read the voltage from analog input channel 0
@@ -247,9 +268,13 @@ class App(customtkinter.CTk):
 
             # Calculate the pressure using a linear calibration
             pressure = (ain0_voltage - voltage_min) * (pressure_max - pressure_min) / (voltage_max - voltage_min) + pressure_min
-
+            
+                
+            # normalzed pressure
+            normalized_pressure = pressure - self.initial_pressure 
+       
             # Print the pressure in psi
-            return pressure
+            return normalized_pressure
 
             # Delay for 1 second
             time.sleep(0.5)
@@ -259,7 +284,7 @@ class App(customtkinter.CTk):
         # Define the calibration parameters for your specific pressure sensor
         voltage_min = 0 #0.6115  # Minimum voltage from the pressure sensor in volts
         voltage_max = 5  # Maximum voltage from the pressure sensor in volts
-        pressure_min = 0.0  # Minimum pressure in psi
+        pressure_min = -12.0  # Minimum pressure in psi
         pressure_max = 7500  # Maximum pressure in psi
         voltage_offset = 0.111  # Offset voltage from the pressure sensor in volts
 
@@ -390,72 +415,73 @@ class App(customtkinter.CTk):
 
             
             # Test 1
-            self.fill_sol_2.configure(fg_color="red")
+            #self.fill_sol_2.configure(fg_color="red")
 
             self.d.setDOState(self.solonid_high_pressure, 1)  # Turn on solenoid 1
             self.fill_sol_1.configure(fg_color="green")
-            time.sleep(2)
+            time.sleep(20)
             
             self.d.setDOState(self.solonid_high_pressure, 0)  # Turn off solenoid 1
             self.fill_sol_1.configure(fg_color="red")
-            time.sleep(1)
+            time.sleep(0.5)
             
             self.d.setDOState(self.solonid_vent, 1)  # Turn on vent
             self.vent.configure(fg_color="green")
-            time.sleep(2)
+            time.sleep(3)
             
             self.d.setDOState(self.solonid_vent, 0)  # Turn off vent
             self.vent.configure(fg_color="red")
             
             ##progress bar
-            progress+=(1/6)
+            progress+=(1/3)
             self.slider_callback(progress)
 
         if not self.stopped:
             # Complete Test 1
             self.test1_indicator.configure(fg_color="green")
+            self.message_textbox.insert(tkinter.END, "Testing has Completed \n") ### new addition for signal pressure rating test
 
 
 
-        for test2_iteration in range(3):
-            # Test 2
-
-            # Check if the stop button is pressed
-            if self.stopped:
-                break
-
-            # Check if the door is open
-            if self.get_door_status() == 0 or self.get_emergency_status() == 0:
-                self.stop()
-                return
-            
-            self.fill_sol_1.configure(fg_color="red")
-
-            self.d.setDOState(self.solonid_low_pressure, 1)  # Turn on solenoid 2
-            self.d.setDOState(self.solonid_high_pressure, 1)
-            self.fill_sol_2.configure(fg_color="green")
-            time.sleep(2)
-            
-            self.d.setDOState(self.solonid_low_pressure, 0)  # Turn off solenoid 2
-            self.d.setDOState(self.solonid_high_pressure, 0)
-            self.fill_sol_2.configure(fg_color="red")
-            time.sleep(1)
-            
-            self.d.setDOState(self.solonid_vent, 1)  # Turn on vent
-            self.vent.configure(fg_color="green")
-            time.sleep(2)
-            
-            self.d.setDOState(self.solonid_vent, 0)  # Turn off vent
-            self.vent.configure(fg_color="red")
-
-            ##progress bar
-            progress+=(1/6)
-            self.slider_callback(progress)
-
-        if not self.stopped:
-            # Complete Test 2
-            self.test2_indicator.configure(fg_color="green")
-            self.message_textbox.insert(tkinter.END, "Testing has Completed \n")
+##        for test2_iteration in range(3):
+##            # Test 2
+##
+##            # Check if the stop button is pressed
+##            if self.stopped:
+##                break
+##
+##            # Check if the door is open
+##            if self.get_door_status() == 0 or self.get_emergency_status() == 0:
+##                self.stop()
+##                return
+##            
+##            self.fill_sol_1.configure(fg_color="red")
+##
+##            self.d.setDOState(self.solonid_low_pressure, 1)  # Turn on solenoid 2
+##            self.d.setDOState(self.solonid_high_pressure, 1)
+##            self.fill_sol_2.configure(fg_color="green")
+##            time.sleep(2)
+##            
+##            self.d.setDOState(self.solonid_low_pressure, 0)  # Turn off solenoid 2
+##            self.d.setDOState(self.solonid_high_pressure, 0)
+##            self.fill_sol_2.configure(fg_color="red")
+##            time.sleep(1)
+##            
+##            self.d.setDOState(self.solonid_vent, 1)  # Turn on vent
+##            self.vent.configure(fg_color="green")
+##            time.sleep(2)
+##            
+##            self.d.setDOState(self.solonid_vent, 0)  # Turn off vent
+##            self.vent.configure(fg_color="red")
+##
+##            ##progress bar
+##            progress+=(1/6)
+##            self.slider_callback(progress)
+##
+##        if not self.stopped:
+##            # Complete Test 2
+##            self.test2_indicator.configure(fg_color="green")
+##            self.message_textbox.insert(tkinter.END, "Testing has Completed \n")
             
 
 
@@ -466,8 +492,8 @@ class App(customtkinter.CTk):
         # Turn off all solenoids and indicators
         self.d.setDOState(self.solonid_high_pressure, 0)
         self.fill_sol_1.configure(fg_color="red")
-        self.d.setDOState(self.solonid_low_pressure, 0)
-        self.fill_sol_2.configure(fg_color="red")
+        #self.d.setDOState(self.solonid_low_pressure, 0)
+        #self.fill_sol_2.configure(fg_color="red")
         
         self.d.setDOState(self.solonid_vent, 1)
         self.vent.configure(fg_color="green")
@@ -482,10 +508,10 @@ class App(customtkinter.CTk):
 
         # Reset all indicators and colors
         self.fill_sol_1.configure(fg_color="red")
-        self.fill_sol_2.configure(fg_color="red")
+        #self.fill_sol_2.configure(fg_color="red")
         self.vent.configure(fg_color="red")
         self.test1_indicator.configure(fg_color="grey")
-        self.test2_indicator.configure(fg_color="grey")
+        #self.test2_indicator.configure(fg_color="grey")
 
         self.message_textbox.insert(tkinter.END, "Testing has stopped \n")
         
@@ -506,15 +532,15 @@ class App(customtkinter.CTk):
             self.stopped = False
 
 
-            
+            self.measure_initial_pressure()
             self.slider_callback(0)
             
             # Reset all indicators and colors
             self.fill_sol_1.configure(fg_color="red")
-            self.fill_sol_2.configure(fg_color="red")
+            #self.fill_sol_2.configure(fg_color="red")
             self.vent.configure(fg_color="red")
             self.test1_indicator.configure(fg_color="grey")
-            self.test2_indicator.configure(fg_color="grey")
+            #self.test2_indicator.configure(fg_color="grey")
 
 
             # Reset all indicators and colors after stopping
