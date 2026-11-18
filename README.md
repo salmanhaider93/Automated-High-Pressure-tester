@@ -44,7 +44,8 @@ https://github.com/user-attachments/assets/982fd656-32b6-4165-b388-7a85966850b3
 
 https://github.com/user-attachments/assets/81e833f2-bf5f-43db-a152-0402850bf570
 
-<img width="1200" height="1600" alt="WhatsApp Image 2026-11-17 at 8 46 04 PM" src="https://github.com/user-attachments/assets/079ef886-2b82-4f9a-9c17-333f86ef624a" />
+<img width="800" height="1200" alt="WhatsApp Image 2026-11-17 at 8 45 54 PM" src="https://github.com/user-attachments/assets/2101bf52-f149-4fe5-8e53-afae81d01555" />
+
 
 
 
